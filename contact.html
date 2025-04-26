@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css">
+
+ <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Section: Contact Info */
+        .contact-us {
+            padding: 60px 20px;
+            background-color: #ffffff;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .contact-col {
+            background-color: #e3f2fd;
+            padding: 30px 20px;
+            border-radius: 16px;
+            width: 280px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .contact-col:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .contact-col span:first-child {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .contact-col h5 {
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: #0d47a1;
+        }
+
+        .contact-col p, 
+        .contact-col a {
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-col a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+
+        /* Section: Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0d47a1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0d47a1;
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            background-color: #0d47a1;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #08306b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form {
+                margin: 40px 20px;
+            }
+        }
+    </style>
+
+    <!-- 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 500px;
+            background: #fff;
+            padding: 30px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #555;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* ------ for contact us like home mobile  email */
+        .contact-us {
+    padding: 50px 20px;
+    background: #fff;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.contact-col {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.contact-col:hover {
+    transform: scale(1.03);
+}
+
+.icon {
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.info h5 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.info p {
+    margin: 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style> -->
+    
+</head>
+<body>
+    <section class=" sub-header">
+        <nav>
+            <a href="Index.html"> <img src="/images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu"></i>
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="cource.html">course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+       <h1>contact us</h1>
+</section>
+   <!-- -------- our contact----- -->
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16376658.535984447!2d66.39851980840528!3d19.97058075334798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1745257548080!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <!-- Address Section -->
+            <div class="contact-col">
+                <span>🏠</span>
+                <span>
+                    <h5>AB Road, PAtel Building</h5>
+                    <p>Indore India</p>
+                </span>
+            </div>
+    
+            <!-- Mobile Number Section -->
+            <div class="contact-col">
+                <span>📞</span>
+                <span>
+                    <h5>Mobile Number</h5>
+                    <p><a href="tel:9179276701">9179276701</a></p>
+                </span>
+            </div>
+    
+            <!-- Email Section -->
+            <div class="contact-col">
+                <span>✉️</span>
+                <span>
+                    <h5>Email ID</h5>
+                    <p><a href="mailto:ashutoshpatel@gmail.com">ashutoshpatel@gmail.com</a></p>
+                </span>
+            </div>
+        </div>
+    </section>
+    
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Write your message here..." required></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    
+    
+     </div>
+   
+
+
+
+
+<!-- ------- footer------- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam non, architecto neque alias<br>
+      velit recusandae officiis! Eaque dolorum modi dicta sed voluptates enim impedit nemo non, libero ipsa. Autem, inventore.
+    </p>
+    
+    <div class="icons">
+      <a target="_blank" href="http://facebook.com/">
+        <img src="https://freepnglogo.com/images/all_img/1730342312_facebook-logo-2024.png" alt="Facebook">
+      </a>     
+      <a target="_blank" href="https://www.instagram.com/">
+        <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram">
+      </a>
+      <a target="_blank" href="https://twitter.com/">
+        <img src="https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg" alt="Twitter">
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      Made with ❤️ by Ashutosh Patel
+    </div>
+  </section>
+
+</body>
+</html>

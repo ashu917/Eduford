@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css">
+    <style>
+      /* Apply Course Section */
+.apply-course {
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.apply-course h1 {
+    font-size: 36px;
+    color: #00695c;
+    margin-bottom: 15px;
+}
+
+.apply-course p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apply-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.apply-form {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #00695c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #26a69a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(38, 166, 154, 0.5);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #00695c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
+
+    </style>
+</head>
+<body>
+    <section class=" sub-header">
+        <nav>
+            <a href="Index.html"> <img src="/images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu"></i>
+                <ul>
+                  <li> <a href="index.html">Home</a></li>
+                  <li><a href="About.html">About</a></li>
+                  <li><a href="cource.html">course</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+       <h1>Our Courses</h1>
+</section>
+   <!-- -------- our cources----- -->
+
+   <section class="course">
+    <h1>course We offer</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error molestiae ex veniam officia! Architecto delectus, amet, consequatur pariatur ab molestias maiores doloribus, molestiae voluptates facere explicabo tenetur dolore deserunt. Dolor!</p>
+    <div class="row">
+       <div class="course-col">
+      <h3>Intermediate</h3>
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid similique beatae voluptatem, debitis esse sint! Ea, culpa amet sapiente voluptatibus consequuntur alias aut, cupiditate aperiam odit similique ipsam id dolorem.</p>
+   </div>
+  
+   <div class="course-col">
+   <h3>Degree</h3>
+   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid similique beatae voluptatem, debitis esse sint! Ea, culpa amet sapiente voluptatibus consequuntur alias aut, cupiditate aperiam odit similique ipsam id dolorem.</p>
+  </div>
+
+  <div class="course-col">
+  <h3>Post Graduation</h3>
+  <p>The Eduford, as one of the largest nursing schools in Wisconsin, offers a wide array of fully accredited nursing programs, guaranteed clinical placements and a technology-rich Center for Clinical Education. The Eduford College Community Psychology Master's program will help you to meet your goals of becoming a Licensed Professional Counselor.</p>
+ </div>
+</div>
+</section>
+
+
+
+<!-- ---- Facilities---- -->
+<section class="Facilities">
+    <h1>Our Facilities</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nam doloribus vero eos, amet nemo consequuntur, obcaecati aperiam voluptatem placeat porro rem numquam. Quibusdam tempora iure itaque nisi doloribus delectus.</p>
+    <div class="row">
+        <div class="facilities-col">
+            <img src="images/library.png" alt="">
+            <h3>world class library</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint soluta, distinctio, quia ab repellendus facilis sequi sunt repudiandae tempore eius nihil vitae exercitationem omnis, sed vero deleniti similique placeat? Maxime.</p>
+
+        </div>
+        <div class="facilities-col">
+            <img src="images/basketball.png" alt="">
+            <h3>Largest Play Ground</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint soluta, distinctio, quia ab repellendus facilis sequi sunt repudiandae tempore eius nihil vitae exercitationem omnis, sed vero deleniti similique placeat? Maxime.</p>
+            
+        </div>
+        <div class="facilities-col">
+            <img src="images/cafeteria.png" alt="">
+            <h3>Testy and Healthy Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint soluta, distinctio, quia ab repellendus facilis sequi sunt repudiandae tempore eius nihil vitae exercitationem omnis, sed vero deleniti similique placeat? Maxime.</p>
+            
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- ---- Apply for a Course ---- -->
+<section class="apply-course">
+  <h1>Apply for a Course</h1>
+  <p>Fill out the form below to apply for your preferred course or degree program.</p>
+  <div class="apply-form-container">
+      <form class="apply-form">
+          <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Mobile Number</label>
+              <input type="tel" id="phone" placeholder="Enter your mobile number" required>
+          </div>
+          <div class="form-group">
+              <label for="course">Select Course</label>
+              <select id="course" required>
+                  <option value="">-- Select a Course --</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="degree">Degree</option>
+                  <option value="postgrad">Post Graduation</option>
+                  <option value="fullstack">Full Stack Development</option>
+                  <option value="datascience">Data Science & AI</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="message">Additional Message</label>
+              <textarea id="message" placeholder="Any special requests or comments..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit Application</button>
+      </form>
+  </div>
+</section>
+
+
+<!-- ------- footer------- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam non, architecto neque alias<br>
+      velit recusandae officiis! Eaque dolorum modi dicta sed voluptates enim impedit nemo non, libero ipsa. Autem, inventore.
+    </p>
+    
+    <div class="icons">
+      <a target="_blank" href="http://facebook.com/">
+        <img src="https://freepnglogo.com/images/all_img/1730342312_facebook-logo-2024.png" alt="Facebook">
+      </a>     
+      <a target="_blank" href="https://www.instagram.com/">
+        <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram">
+      </a>
+      <a target="_blank" href="https://twitter.com/">
+        <img src="https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg" alt="Twitter">
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      Made with ❤️ by Ashutosh Patel
+    </div>
+  </section>
+
+</body>
+</html>
